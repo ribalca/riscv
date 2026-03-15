@@ -258,6 +258,9 @@ Fault-атаки представляют собой класс физическ
 10. M. Khan, M. E. B. M. Shahfie, M. Mushtaq, R. Pacalet, and L. Apvrille, "Microarchitectural Espionage: FPGA-Based Security Analysis of Branch Prediction in RISC-V Out-of-Order Cores," in *IEEE International Symposium on Digital Forensics and Security (ISDFS)*, Boston, MA, USA, Mar. 2026. [https://ip-paris.hal.science/LTCI/hal-05479284v1](https://ip-paris.hal.science/LTCI/hal-05479284v1)
 11. H. Chauhan, "\[PATCH v3 00/10\] Add RAS support for RISC-V architecture," Linux Kernel Mailing List, Jan. 2026. [https://lore.kernel.org/linux-riscv/20260109083951.98255-1-hchauhan@qualcomm.com/](https://lore.kernel.org/linux-riscv/20260109083951.98255-1-hchauhan@qualcomm.com/) [https://www.phoronix.com/news/RISC-V-RAS-RERI-Linux-Patches](https://www.phoronix.com/news/RISC-V-RAS-RERI-Linux-Patches)
 
+
+99. https://essay.utwente.nl/fileshare/file/104771/van%20Dijk_MA_EEMCS.pdf 
+100. https://www.researchgate.net/publication/340886322_PhD_Thesis_Advancing_Control_Flow_Error_Detection_Techniques_for_Embedded_Software_using_Automated_Implementation_and_Fault_Injection 
 ---
 
 ## ПРИЛОЖЕНИЕ А. Основные требования к оформлению текста ВКР
