@@ -302,7 +302,7 @@ YACCA:       fault_pc=0x80000010, target=0x80000028, offset=+24
 
 ## Ссылки
 
-- Vankeirsbilck J. et al., *"YACCA: Yet Another Control-flow Checking using Assertions"*, 2015
+- Vankeirsbilck J., *"Advancing Control Flow Error Detection Techniques for Embedded Software using Automated Implementation and Fault Injection"*, 2020
 - Goloubeva O. et al., *"Software-Implemented Hardware Fault Tolerance"*, Springer, 2006
 - biRISC-V: https://github.com/YarosLove91/biriscv/tree/periphery
 - RISC-V ISA Spec: https://riscv.org/technical/specifications/
