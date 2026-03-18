@@ -4,7 +4,7 @@
 
 > **Источник:** Vankeirsbilck J., *"Advancing Control Flow Error Detection Techniques for Embedded Software using Automated Implementation and Fault Injection"*, KU Leuven, 2020 — §2.3.2 YACCA.
 >
-> **Целевая платформа:** [biRISC-V](https://github.com/YarosLove91/biriscv/tree/periphery) — суперскалярный двухвыдачный RISC-V процессор.
+> **Целевая платформа:** [biRISC-V](https://github.com/YarosLove91/biriscv/tree/periphery) — суперскалярный двухпоточный (dual-issue) RISC-V процессор.
 
 ---
 
@@ -241,7 +241,7 @@ cd ../tb && make
 
 ### Как работает инъекция в testbench
 
-TCM (Tightly Coupled Memory) биRISC-V индексируется по формуле:
+TCM (Tightly Coupled Memory) biRISC-V индексируется по формуле:
 
 ```
 word_index = addr[16:3]      // 14-битный адрес 64-битного слова
