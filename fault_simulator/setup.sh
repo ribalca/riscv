@@ -39,9 +39,9 @@ check_tool() {
 echo ""
 echo "Checking tools..."
 MISSING=0
-check_tool iverilog        || MISSING=1
-check_tool riscv32-unknown-elf-gcc || {
-    check_tool riscv64-unknown-elf-gcc || MISSING=1
+check_tool /usr/bin/iverilog        || MISSING=1
+check_tool riscv32-linux-gnu-gcc || {
+    check_tool riscv64-linux-gnu-gcc || MISSING=1
 }
 check_tool python3         || MISSING=1
 
