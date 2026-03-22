@@ -2,27 +2,30 @@
 #
 # Requirements:
 #   iverilog   (Icarus Verilog)
-#   riscv32-unknown-elf-gcc + riscv32-unknown-elf-nm (for building programs)
+#   riscv64-linux-gnu-gcc + riscv64-linux-gnu-gcc-nm (for building programs)
 #
 # Install on macOS:  brew install icarus-verilog riscv-gnu-toolchain
-# Install on Ubuntu: apt install iverilog gcc-riscv32-unknown-elf
+# Install on Ubuntu: apt install iverilog
 
-BIRISCV  ?= ../../biriscv          # path to cloned biRISC-V repo
-CORE_DIR  = $(BIRISCV)/src/core
+BIRISCV  ?= ../../../../biriscv          # path to cloned biRISC-V repo
+#CORE_DIR  = $(BIRISCV)/src/core
+CORE_DIR = ../../../../biriscv/src/core
+CORE_FILES = $(wildcard $(CORE_DIR)/*.v)
 BUILD_SW  = ../build/sw
 BUILD_TB  = ../build/tb
 
 IVERILOG  = iverilog
 VVP       = vvp
-NM        = riscv32-unknown-elf-nm
+NM        = riscv64-linux-gnu-gcc-nm
 
 # Verilog source files
 RTL_SRCS  = $(wildcard $(CORE_DIR)/*.v)
 TB_SRCS   = tb_fault_inject.v tcm_mem.v tcm_mem_ram.v
 
 # Common iverilog flags
-IFLAGS   = -g2001 -DTRACE=1 -Dverilog_sim \
-            -I$(CORE_DIR) -I.
+IFLAGS   = -g2001 -DTRACE=1 -Dverilog_sim -I../../../../biriscv/src/core -I. \
+#IFLAGS   = -g2001 -DTRACE=1 -Dverilog_sim -I$(CORE_DIR) -I. \        
+#iverilog -g2001 -DTRACE=1 -Dverilog_sim -I../../../../biriscv/src/core -I. \
 
 all: noprotect_normal noprotect_fault yacca_normal yacca_fault
 	@echo ""
