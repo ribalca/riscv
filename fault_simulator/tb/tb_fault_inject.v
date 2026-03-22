@@ -12,10 +12,9 @@
  *
  *   # Normal run (no fault):
  *   iverilog -o sim.vvp -DTCM_BIN='"../build/sw/auth_yacca.bin"' \
- *            -I ../../biriscv/src/core \
- *            tb_fault_inject.v tcm_mem.v tcm_mem_ram.v \
- *            ../../biriscv/src/core/*.v && vvp sim.vvp
- *
+ *            -I ../../../biriscv/src/core \
+ *            tb_fault_inject.v tcm_mem.v tcm_mem_ram.v ../../../../biriscv/src/core/ \*.v && vvp sim.vvp
+ * 	      
  *   # Fault run:
  *   iverilog ... -DFAULT_INJECT=1 \
  *               -DFAULT_ADDR=32'h80000010 \
@@ -110,7 +109,6 @@ wire        mem_i_accept_w;
 wire [31:0] mem_d_addr_w;
 wire        mem_d_rd_w;
 wire [3:0]  mem_d_wr_w;
-wire [2:0]  mem_d_len_w;
 wire [31:0] mem_d_data_wr_w;
 wire [31:0] mem_d_data_rd_w;
 wire        mem_d_accept_w;
@@ -118,6 +116,10 @@ wire        mem_d_ack_w;
 wire        mem_d_error_w;
 wire [10:0] mem_d_req_tag_w;
 wire [10:0] mem_d_resp_tag_w;
+wire        mem_d_cacheable_w;
+wire        mem_d_invalidate_w;
+wire        mem_d_writeback_w;
+wire        mem_d_flush_w;
 
 // ─── DUT: biRISC-V core ─────────────────────────────────────────────────────
 riscv_core u_dut
@@ -126,6 +128,7 @@ riscv_core u_dut
     .rst_i(rst),
     .reset_vector_i(32'h80000000),
     .intr_i(1'b0),
+    .cpu_id_i(32'b0),
 
     // Instruction memory
     .mem_i_pc_o(mem_i_pc_w),
@@ -135,19 +138,23 @@ riscv_core u_dut
     .mem_i_inst_i(mem_i_inst_w),
     .mem_i_valid_i(mem_i_valid_w),
     .mem_i_accept_i(mem_i_accept_w),
+    .mem_i_error_i(1'b0),
 
     // Data memory
     .mem_d_addr_o(mem_d_addr_w),
     .mem_d_rd_o(mem_d_rd_w),
     .mem_d_wr_o(mem_d_wr_w),
-    .mem_d_len_o(mem_d_len_w),
-    .mem_d_data_o(mem_d_data_wr_w),
-    .mem_d_data_i(mem_d_data_rd_w),
+    .mem_d_data_wr_o(mem_d_data_wr_w),
+    .mem_d_data_rd_i(mem_d_data_rd_w),
     .mem_d_accept_i(mem_d_accept_w),
     .mem_d_ack_i(mem_d_ack_w),
     .mem_d_error_i(mem_d_error_w),
     .mem_d_req_tag_o(mem_d_req_tag_w),
-    .mem_d_resp_tag_i(mem_d_resp_tag_w)
+    .mem_d_resp_tag_i(mem_d_resp_tag_w),
+    .mem_d_cacheable_o(mem_d_cacheable_w),
+    .mem_d_invalidate_o(mem_d_invalidate_w),
+    .mem_d_writeback_o(mem_d_writeback_w),
+    .mem_d_flush_o(mem_d_flush_w)
 );
 
 // ─── TCM memory ─────────────────────────────────────────────────────────────
@@ -163,18 +170,22 @@ tcm_mem u_mem
     .mem_i_inst_o(mem_i_inst_w),
     .mem_i_valid_o(mem_i_valid_w),
     .mem_i_accept_o(mem_i_accept_w),
+    .mem_i_error_o(),  // Not used
 
     .mem_d_addr_i(mem_d_addr_w),
     .mem_d_rd_i(mem_d_rd_w),
     .mem_d_wr_i(mem_d_wr_w),
-    .mem_d_len_i(mem_d_len_w),
-    .mem_d_data_i(mem_d_data_wr_w),
-    .mem_d_data_o(mem_d_data_rd_w),
+    .mem_d_data_wr_i(mem_d_data_wr_w),
+    .mem_d_data_rd_o(mem_d_data_rd_w),
     .mem_d_accept_o(mem_d_accept_w),
     .mem_d_ack_o(mem_d_ack_w),
     .mem_d_error_o(mem_d_error_w),
     .mem_d_req_tag_i(mem_d_req_tag_w),
-    .mem_d_resp_tag_o(mem_d_resp_tag_w)
+    .mem_d_resp_tag_o(mem_d_resp_tag_w),
+    .mem_d_cacheable_i(mem_d_cacheable_w),
+    .mem_d_invalidate_i(mem_d_invalidate_w),
+    .mem_d_writeback_i(mem_d_writeback_w),
+    .mem_d_flush_i(mem_d_flush_w)
 );
 
 // ─── Load TCM binary ─────────────────────────────────────────────────────────
