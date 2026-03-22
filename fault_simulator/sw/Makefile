@@ -1,18 +1,18 @@
 # Makefile – Build RISC-V programs for biRISC-V YACCA demo
 #
 # Requirements:
-#   riscv32-unknown-elf-gcc (or riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32)
-#   riscv32-unknown-elf-objcopy
-#   riscv32-unknown-elf-nm
-#   riscv32-unknown-elf-objdump
+#   riscv32-linux-gnu-gcc (or riscv64-linux-gnu-gcc -march=rv32i -mabi=ilp32)
+#   riscv64-linux-gnu-objcopy
+#   riscv64-linux-gnu-gcc-nm
+#   riscv64-linux-gnu-objdump
 #
 # Install on macOS:   brew install riscv-gnu-toolchain
-# Install on Ubuntu:  apt install gcc-riscv64-linux-gnu  (use riscv64-linux-gnu-gcc)
+# Install on Ubuntu:  apt install riscv64-linux-gnu-gcc  (use riscv64-linux-gnu-gcc)
 
-CROSS   ?= riscv32-unknown-elf
+CROSS   ?= riscv64-linux-gnu
 CC       = $(CROSS)-gcc
 OBJCOPY  = $(CROSS)-objcopy
-NM       = $(CROSS)-nm
+NM       = $(CROSS)-gcc-nm
 OBJDUMP  = $(CROSS)-objdump
 
 CFLAGS   = -march=rv32i -mabi=ilp32 -nostdlib -nostartfiles -O0
