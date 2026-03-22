@@ -133,10 +133,10 @@ Fault-атака A→C (fault заменяет j block_b → j block_c):
 
 | # | Конфигурация | a0 | Итог |
 |:---:|---|:---:|---|
-| 1 | Без защиты, без атаки | 0 | ACCESS DENIED ✅ |
-| **2** | **Без защиты, FAULT** | **1** | **ACCESS GRANTED ❌ (взлом!)** |
-| 3 | YACCA, без атаки | 0 | ACCESS DENIED ✅ |
-| **4** | **YACCA, FAULT** | **-1** | **CFE DETECTED 🛡️ (атака остановлена)** |
+| 1 | Без защиты, без атаки | 0 | ACCESS DENIED |
+| **2** | **Без защиты, FAULT** | **1** | **ACCESS GRANTED (взлом!)** |
+| 3 | YACCA, без атаки | 0 | ACCESS DENIED |
+| **4** | **YACCA, FAULT** | **-1** | **CFE DETECTED (атака остановлена)** |
 
 ### YACCA Overhead
 
