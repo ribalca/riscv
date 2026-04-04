@@ -157,6 +157,8 @@ fault_simulator/
 ├── riscv_sim.py          # RV32I симулятор и энкодер инструкций
 ├── programs.py           # Программы (unprotected + YACCA), fault injection
 ├── setup.sh              # Установка зависимостей, клонирование biRISC-V
+├── fault_campaign.py     # Системное исследование комманд в коде 
+├── deep_analysis.py      # Глубокий анализ CFE 
 ├── sw/
 │   ├── auth_noprotect.S  # RISC-V asm: без защиты
 │   ├── auth_yacca.S      # RISC-V asm: с YACCA_CMP
