@@ -871,10 +871,21 @@ Block C пролог: t4=7; bne t5(5), t4(7)  → TAKEN → error_handler!
 9.  Tenable, "CVE-2026-23217," Tenable, Inc., Feb. 2026. [https://www.tenable.com/cve/CVE-2026-23217](https://www.tenable.com/cve/CVE-2026-23217)
 10. M. Khan, M. E. B. M. Shahfie, M. Mushtaq, R. Pacalet, and L. Apvrille, "Microarchitectural Espionage: FPGA-Based Security Analysis of Branch Prediction in RISC-V Out-of-Order Cores," in *IEEE International Symposium on Digital Forensics and Security (ISDFS)*, Boston, MA, USA, Mar. 2026. [https://ip-paris.hal.science/LTCI/hal-05479284v1](https://ip-paris.hal.science/LTCI/hal-05479284v1)
 11. H. Chauhan, "\[PATCH v3 00/10\] Add RAS support for RISC-V architecture," Linux Kernel Mailing List, Jan. 2026. [https://lore.kernel.org/linux-riscv/20260109083951.98255-1-hchauhan@qualcomm.com/](https://lore.kernel.org/linux-riscv/20260109083951.98255-1-hchauhan@qualcomm.com/) [https://www.phoronix.com/news/RISC-V-RAS-RERI-Linux-Patches](https://www.phoronix.com/news/RISC-V-RAS-RERI-Linux-Patches)
+12. Arsalan Ali Malik, Harshvadan Mihir, Aydin Aysu, CRAFT: Characterizing and Root-Causing Fault Injection Threats at Pre-Silicon, 2025, https://arxiv.org/html/2503.03877v4
+13. M.A. Solouki, J. Sini, M. Violante, Implementation of Control Flow Checking—A New Perspective Adopting Model-Based Software Design, 2022, https://www.mdpi.com/2079-9292/11/19/3074
+14. M.A. Solouki, An Experimental Evaluation of Control Flow Checking for Automotive Embedded Applications Compliant With ISO 26262, 2023, https://www.academia.edu/113130664/An_Experimental_Evaluation_of_Control_Flow_Checking_for_Automotive_Embedded_Applications_Compliant_With_ISO_26262
+15. O. Goloubeva , M. Rebaudengo , M. S. Reorda , M. Violante, Software-Implemented Hardware Fault Tolerance, 2006
+16. Jacob T. Grycel, Hardware Simulation of Embedded Software Fault Attacks: How to SimpliFI Processor Fault Vulnerability Evaluation, 2021
+17. Jacob T. Grycel, SimpliFI: Hardware Simulation of Embedded Software Fault Attacks, 2021, https://www.researchgate.net/publication/352220002_SimpliFI_Hardware_Simulation_of_Embedded_Software_Fault_Attacks
+18. J. Sini, M. A. Solouki, M. Violante, G. Natale, Improving Software Reliability with Rust: Implementation for Enhanced Control Flow Checking Methods, 2025, https://hal.science/hal-05085434v1/document
+19. https://essay.utwente.nl/fileshare/file/104771/van%20Dijk_MA_EEMCS.pdf 
+20. https://www.researchgate.net/publication/340886322_PhD_Thesis_Advancing_Control_Flow_Error_Detection_Techniques_for_Embedded_Software_using_Automated_Implementation_and_Fault_Injection 
 
+Симуляторы
+1. BRISC-V Toolbox, https://ascslab.org/research/briscv/index.html
+2. FISSA: Fault Injection Simulation for Security Assessment, https://github.com/WilliamPsc/FISSA/tree/main
+3. W. Pensec, V. Lapotre, G. Guy, Scripting the Unpredictable: Automate Fault Injection in RTL Simulation for Vulnerability Assessment, 2024, https://hal.science/hal-04683084/document
 
-99. https://essay.utwente.nl/fileshare/file/104771/van%20Dijk_MA_EEMCS.pdf 
-100. https://www.researchgate.net/publication/340886322_PhD_Thesis_Advancing_Control_Flow_Error_Detection_Techniques_for_Embedded_Software_using_Automated_Implementation_and_Fault_Injection 
 ---
 
 ## ПРИЛОЖЕНИЕ А. Основные требования к оформлению текста ВКР
