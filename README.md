@@ -878,8 +878,8 @@ Block C пролог: t4=7; bne t5(5), t4(7)  → TAKEN → error_handler!
 16. Jacob T. Grycel, Hardware Simulation of Embedded Software Fault Attacks: How to SimpliFI Processor Fault Vulnerability Evaluation, 2021
 17. Jacob T. Grycel, SimpliFI: Hardware Simulation of Embedded Software Fault Attacks, 2021, https://www.researchgate.net/publication/352220002_SimpliFI_Hardware_Simulation_of_Embedded_Software_Fault_Attacks
 18. J. Sini, M. A. Solouki, M. Violante, G. Natale, Improving Software Reliability with Rust: Implementation for Enhanced Control Flow Checking Methods, 2025, https://hal.science/hal-05085434v1/document
-19. https://essay.utwente.nl/fileshare/file/104771/van%20Dijk_MA_EEMCS.pdf 
-20. https://www.researchgate.net/publication/340886322_PhD_Thesis_Advancing_Control_Flow_Error_Detection_Techniques_for_Embedded_Software_using_Automated_Implementation_and_Fault_Injection 
+19. R. van Dijk, Fault Injection Attacks on Trusted Execution for RISC-V Cores, 2024, https://essay.utwente.nl/fileshare/file/104771/van%20Dijk_MA_EEMCS.pdf 
+20. J. Vankeirsbilck, PhD Thesis: Advancing Control Flow Error Detection Techniques for Embedded Software using Automated Implementation and Fault Injection, 2020, https://www.researchgate.net/publication/340886322_PhD_Thesis_Advancing_Control_Flow_Error_Detection_Techniques_for_Embedded_Software_using_Automated_Implementation_and_Fault_Injection 
 
 Симуляторы
 1. BRISC-V Toolbox, https://ascslab.org/research/briscv/index.html
