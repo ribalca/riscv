@@ -713,7 +713,7 @@ def inject_fault(memory: dict, fault_pc: int, target_pc: int) -> dict:
 [8000004C] 00100073  ebreak            ; → output = -1
 ```
 
-## 4.4 Интеграция с симуляторами Verilog
+## 4.4 Интеграция с симулятором Verilog
 
 Команда компиляции и запуска RTL-симуляции для эксперимента 4 (YACCA + fault):
 
